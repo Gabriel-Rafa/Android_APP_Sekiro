@@ -331,3 +331,6 @@ class NINJUTSU_TECHNIQUES extends StatelessWidget {
     );
   }
 }
+vou adiocionar umas coisas
+    aa
+aa
