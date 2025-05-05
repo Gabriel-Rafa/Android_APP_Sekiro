@@ -49,10 +49,24 @@ class HomeButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 6.0),
-      child: ElevatedButton(
-        onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (_) => page)),
-        child: Text(title),
+      padding: const EdgeInsets.symmetric(vertical: 8.0), // Espaço igual entre os botões
+      child: SizedBox(
+        width: double.infinity, // Ocupa toda a largura disponível
+        height: 50, // Altura consistente
+        child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(30.0), // Cantos arredondados
+            ),
+          ),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => page),
+            );
+          },
+          child: Text(title),
+        ),
       ),
     );
   }
@@ -99,28 +113,34 @@ class BOSSES extends StatelessWidget {
       title: 'Bosses',
       body: SingleChildScrollView(
         padding: EdgeInsets.all(16.0),
-        child: Column(
-          children: [
-            BossButton(title: 'Gyobu Oniwa', page: GyobuOniwaPage()),
-            BossButton(title: 'Genichiro', page: GenichiroPage()),
-            BossButton(title: 'Macacos da Biombo Dobrável', page: BiomboPage()),
-            BossButton(title: 'Macaco Guardião', page: GuardiaoPage()),
-            BossButton(title: 'Macaco Sem Cabeça', page: SemCabecaPage()),
-            BossButton(title: 'Monge Falso', page: MongeFalsoPage()),
-            BossButton(title: 'SS Isshin', page: SsIsshinPage()),
-            BossButton(title: 'Monge Verdadeiro', page: MongeVerdadeiroPage()),
-            BossButton(title: 'Dragão Divino', page: DragaoDivinoPage()),
-            BossButton(title: 'Coruja Grande Shinobi', page: CorujaGrandePage()),
-            BossButton(title: 'Lady Butterfly', page: LadyButterflyPage()),
-            BossButton(title: 'Demônio do Ódio', page: DemonioPage()),
-            BossButton(title: 'Isshin Ashina (Shura)', page: IsshinShuraPage()),
-            BossButton(title: 'Pai Coruja (Purificação)', page: PaiCorujaPage()),
-            BossButton(title: 'Genichiro Interior', page: GenichiroInteriorPage()),
-            BossButton(title: 'Isshin Interior', page: IsshinInteriorPage()),
-            BossButton(title: 'Coruja Interior', page: CorujaInteriorPage()),
-          ],
+        child: Center(
+          child: ConstrainedBox(
+            constraints: BoxConstraints(maxWidth: 600),
+            child: Column(
+              children: [
+                BossButton(title: 'Gyobu Oniwa', page: GyobuOniwaPage()),
+                BossButton(title: 'Genichiro', page: GenichiroPage()),
+                BossButton(title: 'Macacos da Biombo Dobrável', page: BiomboPage()),
+                BossButton(title: 'Macaco Guardião', page: GuardiaoPage()),
+                BossButton(title: 'Macaco Sem Cabeça', page: SemCabecaPage()),
+                BossButton(title: 'Monge Falso', page: MongeFalsoPage()),
+                BossButton(title: 'SS Isshin', page: SsIsshinPage()),
+                BossButton(title: 'Monge Verdadeiro', page: MongeVerdadeiroPage()),
+                BossButton(title: 'Dragão Divino', page: DragaoDivinoPage()),
+                BossButton(title: 'Coruja Grande Shinobi', page: CorujaGrandePage()),
+                BossButton(title: 'Lady Butterfly', page: LadyButterflyPage()),
+                BossButton(title: 'Demônio do Ódio', page: DemonioPage()),
+                BossButton(title: 'Isshin Ashina (Shura)', page: IsshinShuraPage()),
+                BossButton(title: 'Pai Coruja (Purificação)', page: PaiCorujaPage()),
+                BossButton(title: 'Genichiro Interior', page: GenichiroInteriorPage()),
+                BossButton(title: 'Isshin Interior', page: IsshinInteriorPage()),
+                BossButton(title: 'Coruja Interior', page: CorujaInteriorPage()),
+              ],
+            ),
+          ),
         ),
       ),
+
     );
   }
 }
@@ -134,14 +154,29 @@ class BossButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 5.0),
-      child: ElevatedButton(
-        onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (_) => page)),
-        child: Text(title),
+      padding: const EdgeInsets.symmetric(vertical: 8.0), // Espaçamento uniforme entre botões
+      child: SizedBox(
+        width: double.infinity, // Ocupa toda a largura possível
+        height: 50, // Altura consistente
+        child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(30.0), // Cantos arredondados
+            ),
+          ),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => page),
+            );
+          },
+          child: Text(title),
+        ),
       ),
     );
   }
 }
+
 
 // Mini-telas de Bosses
 Widget simpleDetailPage(String title, String content) {
