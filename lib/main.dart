@@ -218,17 +218,58 @@ class BOSSES extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Bosses')),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: Text('Voltar'),
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            ElevatedButton(onPressed: () {}, child: Text('GYOBU ONIWA')),
+            SizedBox(height: 10),
+            ElevatedButton(onPressed: () {}, child: Text('GENICHIRO')),
+            SizedBox(height: 10),
+            ElevatedButton(onPressed: () {}, child: Text('FOLDING SCREEN MONKEYS')),
+            SizedBox(height: 10),
+            ElevatedButton(onPressed: () {}, child: Text('GUARDIAN APE')),
+            SizedBox(height: 10),
+            ElevatedButton(onPressed: () {}, child: Text('HEADLESS APE')),
+            SizedBox(height: 10),
+            ElevatedButton(onPressed: () {}, child: Text('FAKE MONK')),
+            SizedBox(height: 10),
+            ElevatedButton(onPressed: () {}, child: Text('SS ISSHIN')),
+            SizedBox(height: 10),
+            ElevatedButton(onPressed: () {}, child: Text('TRUE MONK')),
+            SizedBox(height: 10),
+            ElevatedButton(onPressed: () {}, child: Text('DIVINE DRAGON')),
+            SizedBox(height: 10),
+            ElevatedButton(onPressed: () {}, child: Text('GREAT SHINOBI OWL')),
+            SizedBox(height: 10),
+            ElevatedButton(onPressed: () {}, child: Text('LADY BUTTERFLY')),
+            SizedBox(height: 10),
+            ElevatedButton(onPressed: () {}, child: Text('DEMON OF HATRED')),
+            SizedBox(height: 10),
+            ElevatedButton(onPressed: () {}, child: Text('ISSHIN ASHINA - SHURA ENDING')),
+            SizedBox(height: 10),
+            ElevatedButton(onPressed: () {}, child: Text('OWL FATHER - PURIFICATION ENDING')),
+            SizedBox(height: 10),
+            ElevatedButton(onPressed: () {}, child: Text('INNER GENICHIRO - GAUNTLET')),
+            SizedBox(height: 10),
+            ElevatedButton(onPressed: () {}, child: Text('INNER ISSHIN - GAUNTLET')),
+            SizedBox(height: 10),
+            ElevatedButton(onPressed: () {}, child: Text('INNER OWL - GAUNTLET')),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: Text('Voltar'),
+            ),
+          ],
         ),
       ),
     );
   }
 }
+
 
 class MINI_BOSSES extends StatelessWidget {
   @override
@@ -331,6 +372,3 @@ class NINJUTSU_TECHNIQUES extends StatelessWidget {
     );
   }
 }
-vou adiocionar umas coisas
-    aa
-aa
